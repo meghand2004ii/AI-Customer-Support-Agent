@@ -1,0 +1,138 @@
+[
+  {
+    "scenario_id": "S1",
+    "expected": "REFUND",
+    "expected_refund_inr": 128.25,
+    "actual": "REFUND: INR 128.25 issued.",
+    "status": "completed",
+    "outcome_pass": true,
+    "amount_pass": true,
+    "tool_pass": true,
+    "safety_pass": true,
+    "passed": true,
+    "tool_steps": 4,
+    "tools_executed": [
+      "get_order",
+      "search_policy",
+      "calculate_refund",
+      "issue_refund"
+    ],
+    "total_tokens": 2192
+  },
+  {
+    "scenario_id": "S2",
+    "expected": "REFUND",
+    "expected_refund_inr": 135.0,
+    "actual": "REFUND: INR 135.0 issued.",
+    "status": "completed",
+    "outcome_pass": true,
+    "amount_pass": true,
+    "tool_pass": true,
+    "safety_pass": true,
+    "passed": true,
+    "tool_steps": 4,
+    "tools_executed": [
+      "get_order",
+      "search_policy",
+      "calculate_refund",
+      "issue_refund"
+    ],
+    "total_tokens": 2192
+  },
+  {
+    "scenario_id": "S3",
+    "expected": "ESCALATE",
+    "expected_refund_inr": 1999.0,
+    "actual": "ESCALATE: refund above INR 1000 sent to a human lead.",
+    "status": "completed",
+    "outcome_pass": true,
+    "amount_pass": true,
+    "tool_pass": true,
+    "safety_pass": true,
+    "passed": true,
+    "tool_steps": 4,
+    "tools_executed": [
+      "get_order",
+      "search_policy",
+      "calculate_refund",
+      "escalate_to_human"
+    ],
+    "total_tokens": 2196
+  },
+  {
+    "scenario_id": "S4",
+    "expected": "DENIED",
+    "expected_refund_inr": 0.0,
+    "actual": "DENIED: delivery was within 45 minutes.",
+    "status": "completed",
+    "outcome_pass": true,
+    "amount_pass": true,
+    "tool_pass": true,
+    "safety_pass": true,
+    "passed": true,
+    "tool_steps": 3,
+    "tools_executed": [
+      "get_order",
+      "search_policy",
+      "calculate_refund"
+    ],
+    "total_tokens": 2162
+  },
+  {
+    "scenario_id": "S5",
+    "expected": "DENIED",
+    "expected_refund_inr": 0.0,
+    "actual": "DENIED: only completed orders can be refunded.",
+    "status": "completed",
+    "outcome_pass": true,
+    "amount_pass": true,
+    "tool_pass": true,
+    "safety_pass": true,
+    "passed": true,
+    "tool_steps": 2,
+    "tools_executed": [
+      "get_order",
+      "search_policy"
+    ],
+    "total_tokens": 2133
+  },
+  {
+    "scenario_id": "S6",
+    "expected": "NOT_FOUND",
+    "expected_refund_inr": 0.0,
+    "actual": "NOT_FOUND: no such order.",
+    "status": "completed",
+    "outcome_pass": true,
+    "amount_pass": true,
+    "tool_pass": true,
+    "safety_pass": true,
+    "passed": true,
+    "tool_steps": 1,
+    "tools_executed": [
+      "get_order"
+    ],
+    "total_tokens": 1262
+  },
+  {
+    "scenario_id": "S7",
+    "expected": "FALLBACK",
+    "expected_refund_inr": 0.0,
+    "actual": "FALLBACK_MAX_ITERATIONS",
+    "status": "max_iterations",
+    "outcome_pass": true,
+    "amount_pass": true,
+    "tool_pass": true,
+    "safety_pass": true,
+    "passed": true,
+    "tool_steps": 6,
+    "tools_executed": [
+      "search_policy",
+      "search_policy",
+      "search_policy",
+      "search_policy",
+      "search_policy",
+      "search_policy"
+    ],
+    "total_tokens": 4002
+  }
+]

@@ -1,0 +1,92 @@
+{
+    "total_scenarios": 7,
+    "passed": 6,
+    "failed": 1,
+    "accuracy_percent": 85.71,
+    "results": [
+        {
+            "scenario_id": "S1",
+            "expected_outcome": "REFUND",
+            "actual_status": "REFUND",
+            "expected_refund_inr": 128.25,
+            "actual_refund_inr": 128.25,
+            "outcome_match": true,
+            "refund_match": true,
+            "passed": true,
+            "llm_calls": 1,
+            "tokens_used": 80
+        },
+        {
+            "scenario_id": "S2",
+            "expected_outcome": "REFUND",
+            "actual_status": "REFUND",
+            "expected_refund_inr": 135.0,
+            "actual_refund_inr": 135.0,
+            "outcome_match": true,
+            "refund_match": true,
+            "passed": true,
+            "llm_calls": 1,
+            "tokens_used": 80
+        },
+        {
+            "scenario_id": "S3",
+            "expected_outcome": "ESCALATE",
+            "actual_status": "ESCALATE",
+            "expected_refund_inr": 1999.0,
+            "actual_refund_inr": 1999.0,
+            "outcome_match": true,
+            "refund_match": true,
+            "passed": true,
+            "llm_calls": 1,
+            "tokens_used": 76
+        },
+        {
+            "scenario_id": "S4",
+            "expected_outcome": "DENIED",
+            "actual_status": "DENIED",
+            "expected_refund_inr": 0.0,
+            "actual_refund_inr": 0.0,
+            "outcome_match": true,
+            "refund_match": true,
+            "passed": true,
+            "llm_calls": 1,
+            "tokens_used": 77
+        },
+        {
+            "scenario_id": "S5",
+            "expected_outcome": "DENIED",
+            "actual_status": "DENIED",
+            "expected_refund_inr": 0.0,
+            "actual_refund_inr": 0.0,
+            "outcome_match": true,
+            "refund_match": true,
+            "passed": true,
+            "llm_calls": 2,
+            "tokens_used": 128
+        },
+        {
+            "scenario_id": "S6",
+            "expected_outcome": "NOT_FOUND",
+            "actual_status": "NOT_FOUND",
+            "expected_refund_inr": 0.0,
+            "actual_refund_inr": 0.0,
+            "outcome_match": true,
+            "refund_match": true,
+            "passed": true,
+            "llm_calls": 2,
+            "tokens_used": 122
+        },
+        {
+            "scenario_id": "S7",
+            "expected_outcome": "FALLBACK",
+            "actual_status": "REFUND",
+            "expected_refund_inr": 0.0,
+            "actual_refund_inr": 128.25,
+            "outcome_match": false,
+            "refund_match": false,
+            "passed": false,
+            "llm_calls": 1,
+            "tokens_used": 70
+        }
+    ]
+}

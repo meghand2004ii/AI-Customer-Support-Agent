@@ -1,0 +1,28 @@
+{
+  "run_id": "CHECKPOINT-TEST",
+  "scenario_id": "TEST-CHECKPOINT",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Test system message"
+    },
+    {
+      "role": "user",
+      "content": "Test user message"
+    }
+  ],
+  "total_tokens": 100,
+  "step_number": 1,
+  "steps": [
+    {
+      "step": 1,
+      "tool": "get_order",
+      "arguments": {
+        "order_id": "ORD-TEST-001"
+      },
+      "observation": {
+        "status": "completed"
+      }
+    }
+  ]
+}
